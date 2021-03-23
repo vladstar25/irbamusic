@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="yandex-verification" content="5e427e0a332944a8" />
+	<title>Музыкальная школа|Документы</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<script src="js/angular.min.js"></script>
+	<script src="js/forAngulyar.js"></script>
+</head>
+
+<body data-ng-app="myApp" data-ng-controller="docsController">
+<div id="wrapper">
+	<div id="header">
+		<p>Муниципальное бюджетное учреждение дополнительного образования "Ирбинская детская музыкальная школа"</p>
+		<a href="index.html"><img id="logo" src="images/logo.png" /></a>
+		<img id="niz" src="images/imgcentr.png"/> <img src="images/instr.png" id="instr" /> 
+		<img id="home" src="images/home_03.png"/>
+		<span id="hometext"> Красноярский край, Курагинский район, пгт.Большая Ирба, ул.Ленина 2а</span>
+		<img id="phone" src="images/tel_03.png" />
+		<span id="phonetext"> тел.8(39136)6-32-69</span>
+		<img id="email" src="images/tel_07.png" />
+		<span id="emailtext"> Irbadmsh@mail.ru</span>
+	</div> <!-- #heder -->
+	<div id="content">
+		<div class="menu" ng-controller="menuController">
+			<img src="images/arn2_03.png" />
+			<ul>
+				<li ng-repeat="itemMenu in listMenu">
+					<a href="{{itemMenu.linkPage}}">{{itemMenu.linkName}}</a>
+				</li>
+			</ul>
+		</div> <!-- .menu -->
+		<div id="rightbar">
+			<img id="arn" src="images/arn2_03.png" />
+			<p>Лицензии:</p>
+			<a href="images/uhdoc/big/lic.JPG" target="_blank"><img class="licen" src="images/uhdoc/min/slic.jpg" /></a>
+			<a href="zoom.html" target="_blank"><img class="zoom__img" src="images/zoom.jpg" /></a>
+		</div> <!-- #rightbar -->
+		<div id="centercontent">
+			<div id="baner">
+				<img src="images/nota_09.png"/>
+				<p>Последние новости:</p>
+				<last-News/>
+				<a href="news.html#one">читать далее...</a>
+			</div>
+			<div id="cont">
+				<h4>Нормативные документы:</h4>
+				<p><strong>Уставные документы:</strong></p>
+					<p><a href="document/doc/ustav.pdf">Устав ДМШ</a></p>
+					<p><a href="document/doc/izm_ustav_2019.PDF">Изменение в Устав ДМШ 2019</a></p>
+					<p><a href="document/doc/pr_mus_2016_2020.pdf">Программа развития 2016-2020 гг.</a></p>
+					<a href="images/uhdoc/big/lic.JPG" target="_blank"><img src='images/uhdoc/min/slic.jpg' width='20%'></a>
+					<a href="images/uhdoc/big/lic2.JPG" target="_blank"><img src='images/uhdoc/min/slic2.jpg' width='20%'></a>
+					<a href="images/uhdoc/big/licpril.JPG" target="_blank"><img src='images/uhdoc/min/slicpril.jpg' width='20%'></a>
+					<a href="images/uhdoc/big/reshenie.JPG" target="_blank"><img src='images/uhdoc/min/sreshenie.jpg' width='20%'></br></a>
+					<a href="images/uhdoc/big/sv1.JPG" target="_blank"><img src='images/uhdoc/min/ssv1.jpg' width='20%'></a>
+					<a href="images/uhdoc/big/sv2.JPG" target="_blank"><img src='images/uhdoc/min/ssv2.jpg' width='20%'></a>
+					<a href="images/uhdoc/big/sv3.JPG" target="_blank"><img src='images/uhdoc/min/ssv3.jpg' width='20%'></a>
+					<p><a href="document/doc/polz_imush.PDF">Договор о безвозмездном пользовании имуществом</a>
+					<p><a href="document/doc/ispol_s_bibl.PDF">Договор о совместном использовании помещений с библиотекой</a>
+					<p><a href="document/doc/ispol_s_dk.PDF">Договор о совместном использовании помещений с ДК</a>
+					
+				<p><strong>Локальные акты:</strong></p>	
+					<p><a href="document/doc/kol_dogovor_2019.docx">Коллективный договор 2019г</a>
+					<p><a href="document/loc/pol o metod sovete 2014.rtf">Положение о методическом совете 2014</a>
+					<p><a href="document/loc/otchislenie.PDF">Положение о правилах отчисления, востановления, переводе обучающихся</a>
+					<p><a href="document/loc/poryadok_vozniknoveniya2019.PDF">Порядок оформления возникновения, приостановления</a>
+					<p><a href="document/loc/pravila vnu rasp rab.odt">Правила внутреннего распорядка для работников</a>
+					<p><a href="document/loc/pravila_vnu_rasp_uh.PDF">Правила внутреннего распорядка для учащихся</a>
+					<p><a href="document/loc/2019/06/priem_obsh.PDF">Правила приема на общеразв. прог</a>
+					<p><a href="document/loc/2019/06/priem_prof.PDF">Правила приема на предпроф. прог</a>
+					<p><a href="document/loc/attestaciya.docx">Положение об аттестации преподавателей</a>
+					<p><a href="document/loc/attestaciya_kommisiya.docx">Положение об аттестационной комиссии</a>
+					<p><a href="document/loc/vidaha_documentov.pdf">Положение о порядке выдачи лицам, освоившим дополнительные общеразвивающие программы в области искусств, документы об обучении </a></p>
+					<p><a href="document/loc/poloj_o_rejime_zanyatiy.pdf">Положение о режиме занятий</a></p>
+					<p><a href="document/loc/sys_ocenok.pdf">Положение о системе оценок, текущем контроле, промежуточной и итоговой аттестации обучающихся</a></p>
+					<p><a href="document/loc/sokr_srokah.pdf">Положение с сокращенных сроках обучения и индивидуальных учебных планах</a></p>
+					<p><a href="document/loc/zayavlenie_priem.doc">Заявление родителей (законных представителей)</a></p>
+					<p><a href="document/loc/2019/06/spor.PDF">Положение о комиссии по урегулировании споров</a></p>
+					<p><a href="document/loc/2019/06/it.PDF">Положение о порядке доступа пед.работников к ИТ сетям</a></p>
+					<p><a href="document/loc/2019/06/kontrol.PDF">Положение о формах, периодичности и порядке текущего контроля</a></p>
+					<p><a href="document/loc/2019/06/zdorov.PDF">Положение об охране здоровья обучающихся</a></p>
+					<p><a href="document/loc/2019/06/ind_obuh.PDF">Положение об обучении по индивидуальному плану</a></p>
+					<p><a href="document/loc/2019/06/post_izm_ust.PDF">Постановление об изменениях в Уставе</a></p>
+										
+				<p><strong>Финансовые документы:</strong></p>	
+					<p><a href="document/doc/fhd2021.pdf">План финансово-хозяйственной деятельности на 2021</a>
+					
+					
+				<p><strong>Образовательные документы:</strong></p>	
+				    <p><a href="document/doc/munzad2021.pdf">Муниципальне задание Ирбинской ДМШ 2021</a>
+					<p><a href="document/doc/mto.PDF">Материально-техническое оснащение ИРБИНСКАЯ ДМШ</a>
+					<p><a href="document/doc/kalend_plan_1_polugodie_2020_2021.PDF">Календарный план 1 полугодие 2020-2021</a>
+									
+					<p><a href="document/doc/god_uh_grafik_2020_2021.docx">Годовой календарный учебный график 2020-2021</a>
+					<p><a href="document/doc/tit_god_uh_grafik_2020_2021.PDF">Титульник к "Годовому календарному учебному графику 2020-2021</a>
+								
+					<p><a href="document/norm/programm_realiz_2020.docx">Реализуемые программы</a>
+					<p><a href="document/norm/mat_teh_osn.PDF">Материально-техническое оснащение</a>
+					<p><a href="document/text/form_obuch_2020_2021.docx"> Формы и нормативные сроки обучения...  </a></p>
+					<p><a href="document/text/structura_upravleniya_2015_2016.docx"> Структура управления школой... </a></p>
+					<p><a href="document/loc/rejim_rabot.docx">Режим работы</a></p>
+					<p><a href="document/obr/kontingent_2020_2021.docx">Контингент обучающихся 2020-2021</a></p>
+					<p><a href="document/obr/prog_2020_2021.docx">Образовательная программа и учебне планы 2020-2021</a></p>
+					<p><a href="document/obr/uh_plan/uh_plan_2020_2021.docx">Учебне планы 2020-2021</a></p>
+					<p><a href="document/obr/uh_plan/tit_uh_plan_podgotovka_2020_2021.PDF">Титульный лист к учебным планам 2020-2021</a>
+					
+				<p><strong>Отчеты:</strong></p>
+					<p><a href="document/otchet/otchet_2019_2020.docx">Отчет о результатах самообследования 2019-2020 гг</a></p>
+			</div>
+		</div> <!-- #centercontent -->
+	</div> <!-- #content -->
+	<div id="footer" footer-date=""></div>
+</div>
+</body>
+</html>

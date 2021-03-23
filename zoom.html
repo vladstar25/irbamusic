@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="yandex-verification" content="5e427e0a332944a8" />
+	<title>Музыкальная школа|Главная</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<link rel="shortcut icon" href="favico.ico" />
+	<script src="js/angular.min.js"></script>
+	<script src="js/forAngulyar.js"></script>
+</head>
+
+<body data-ng-app="myApp" data-ng-controller="zoomController">
+<div id="wrapper">
+	<div id="header">
+		<p>Муниципальное бюджетное учреждение дополнительного образования "Ирбинская детская музыкальная школа"</p>
+		<a href="index.html"><img id="logo" src="images/logo.png" /></a>
+		<img id="niz" src="images/imgcentr.png"/> <img src="images/instr.png" id="instr" /> 
+		<img id="home" src="images/home_03.png"/>
+		<span id="hometext"> Красноярский край, Курагинский район, пгт.Большая Ирба, ул.Ленина 2а</span>
+		<img id="phone" src="images/tel_03.png" />
+		<span id="phonetext"> тел.8(39136)6-32-69</span>
+		<img id="email" src="images/tel_07.png" />
+		<span id="emailtext"> Irbadmsh@mail.ru</span>
+	</div> <!-- #heder -->
+	<div id="content">
+		<div class="menu" ng-controller="menuController">
+			<img src="images/arn2_03.png" />
+			<ul>
+				<li ng-repeat="itemMenu in listMenu">
+					<a href="{{itemMenu.linkPage}}">{{itemMenu.linkName}}</a>
+				</li>
+			</ul>
+		</div> <!-- .menu -->
+		<div id="rightbar">
+			<img id="arn" src="images/arn2_03.png" />
+			<p>Лицензии:</p>
+			<a href="images/uhdoc/big/lic.JPG" target="_blank"><img class="licen" src="images/uhdoc/min/slic.jpg" /></a>
+			<a href="#" target="_blank"><img class="zoom__img" src="images/zoom.jpg" /></a>
+		</div> <!-- #rightbar -->
+		<div id="centercontent">
+			<div id="baner">
+				<img src="images/nota_09.png"/>
+				<p>Последние новости:</p>
+					<last-News/>
+				<a href="news.html#one">читать далее...</a>
+			</div>
+			<div id="cont">
+            <div class="zoom">
+			    <h3>Уважаемый посетитель сайта!</h3>
+<p>
+Если Вы испытываете затруднения при восприятии текстовой информации и графических деталей нашего сайта, предлагаем Вам воспользоваться 
+стандартным инструментом, встроенным во все современные интернет-браузеры. Для применения функции масштабирования: перейдите на интересующую
+ Вас страницу, затем, удерживая в нажатом состоянии <span class='flashTag'>клавишу "Ctrl"</span>, нажмите <span class='flashTag'>клавишу "+"</span> 
+ необходимое число раз для увеличения масштаба или <span class='flashTag'>клавишу "-"</span> - для его уменьшения. 
+ Сочетание <span class='flashTag'>"Ctrl" + "0"</span> вернет масштаб страницы к исходному значению.
+<p>Использование программы Экранная лупа.</p>
+</p>
+<ol>
+	<li>Для запуска программы выполните действия: Пуск / Все программы / Стандартные / Специальные возможности / Экранная лупа.
+	<li>Если откроется вводное диалоговое окно, нажмите ОК.
+	<li>В списке Увеличение (Magnification level) выберите масштаб.
+	<li>Отметьте флажками поля для отслеживания курсора мыши, клавиатуры или редактирования текста.
+	<li>Отметьте флажками поля с функциями для инвертирования цветов, начала работы в свёрнутом окне или отображения программы Экранная лупа.
+	<li>Нажмите кнопку Свернуть, чтобы использовать программу, либо нажмите кнопку Выход, чтобы закрыть программу. При необходимости 
+	восстановите окно программы Экранная лупа.
+</ol>
+Использование программы Экранная клавиатура.
+<ol>
+	<li>Откройте программу, которую вы используете для просмотра   интернет страниц
+	<li>Выполните действия: Пуск / Все программы / Стандартные / Специальные возможности / Экранная клавиатура.
+	<li>Если откроется вводное диалоговое окно, нажмите ОК.
+	<li>При необходимости переместите курсор.
+	<li>Введите текст или клавиатурные команды.
+	<li>После завершения ввода нажмите Закрыть.
+</ol>
+        </div> <!--- .zoom -->
+			</div> <!--- #cont -->
+		</div> <!-- #centercontent -->
+	</div> <!-- #content -->
+	<div id="footer" footer-date=""></div>
+</body>
+</html>

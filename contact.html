@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="yandex-verification" content="5e427e0a332944a8" />
+	<title>Музыкальная школа|Контакты</title>
+	<link href="css/style.css" rel="stylesheet" type="text/css" />
+	<script src="js/angular.min.js"></script>
+	<script src="js/forAngulyar.js"></script>
+	<script type="text/javascript">
+		function controlMail () 
+		{
+			var a = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,4})+$/;
+			var inp = document.getElementById('eml');
+			if (inp.value.search(a) !==-1) {
+				document.getElementById('subm').disabled=0 ;
+			} else {
+				document.getElementById('subm').desabled=1 ;
+			}
+		}
+	</script>
+</head>
+
+<body data-ng-app="myApp" data-ng-controller="contactController">
+<div id="wrapper">
+	<div id="header">
+		<p>Муниципальное бюджетное учреждение дополнительного образования "Ирбинская детская музыкальная школа"</p>
+		<a href="index.ru"><img id="logo" src="images/logo.png" /></a>
+		<img id="niz" src="images/imgcentr.png"/> <img src="images/instr.png" id="instr" /> 
+		<img id="home" src="images/home_03.png"/>
+		<span id="hometext"> Красноярский край, Курагинский район, пгт.Большая Ирба, ул.Ленина 2а</span>
+		<img id="phone" src="images/tel_03.png" />
+		<span id="phonetext"> тел.8(39136)6-32-69</span>
+		<img id="email" src="images/tel_07.png" />
+		<span id="emailtext"> Irbadmsh@mail.ru</span>
+	</div> <!-- #heder -->
+	<div id="content">
+		<div class="menu" ng-controller="menuController">
+			<img src="images/arn2_03.png" />
+			<ul>
+				<li ng-repeat="itemMenu in listMenu">
+					<a href="{{itemMenu.linkPage}}">{{itemMenu.linkName}}</a>
+				</li>
+			</ul>
+		</div> <!-- .menu -->
+		<div id="rightbar">
+			<img id="arn" src="images/arn2_03.png" />
+			<p>Лицензии:</p>
+			<a href="images/uhdoc/big/lic.JPG" target="_blank"><img class="licen" src="images/uhdoc/min/slic.jpg" /></a>
+			<a href="zoom.html" target="_blank"><img class="zoom__img" src="images/zoom.jpg" /></a>
+		</div> <!-- #rightbar -->
+		<div id="centercontent">
+			<div id="baner">
+				<img src="images/nota_09.png"/>
+				<p>Последние новости:</p>
+					<last-News/>
+				<a href="news.html#one">читать далее...</a>
+			</div>
+			<div id="cont">
+			  
+			  <form action="<?=$SERVER['PHP_SELF']?>" method="POST">
+				<table id="contactTable">
+					<caption> <h4>Вы можете отправить нам сообщение заполнив форму:</h4></caption>
+					<tr>
+						<td><label for="fio">ФИО:</label></td>
+						<td><input type="text" name="fio" id="fio" /></td>
+					</tr>
+					<tr>
+						<td><label for="eml">Email:</label></td>
+						<td><input type="text" name="eml" id="eml" /></td>
+					</tr>
+					<tr>
+						<td><label for="tema">Тема письма:</label></td>
+						<td><input type="text" onClick="controlMail()" name="tema" id="tema" /></td>
+					</tr>
+					<tr>
+						<td><label for="msg">Текст письма:</label></td>
+						<td><textarea name="msg" id="msg" cols="40" rows="10"></textarea></td>
+					</tr>
+					<tr>
+						<td colspan="2"><input type="submit" id="subm" value="Отправить..." disabled /></td>
+					</tr>
+				</table>
+			  </form>
+			  
+			</div>
+		</div> <!-- #centercontent -->
+	</div> <!-- #content -->
+	<div id="footer" footer-date=""></div>
+</div>
+</body>
+</html>
