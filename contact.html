@@ -57,31 +57,33 @@
 			</div>
 			<div id="cont">
 			  
-			  <form action="<?=$SERVER['PHP_SELF']?>" method="POST">
+			  <form action="<?=$SERVER['PHP_SELF']?>" method="POST" name="myForm">
 				<table id="contactTable">
 					<caption> <h4>Вы можете отправить нам сообщение заполнив форму:</h4></caption>
 					<tr>
 						<td><label for="fio">ФИО:</label></td>
-						<td><input type="text" name="fio" id="fio" /></td>
+						<td><input type="text" data-ng-model="fio" name="fio" id="fio" required/></td>
 					</tr>
 					<tr>
 						<td><label for="eml">Email:</label></td>
-						<td><input type="text" name="eml" id="eml" /></td>
+						<td><input type="text" data-ng-model="eml" name="eml" id="eml" required/></td>
 					</tr>
 					<tr>
 						<td><label for="tema">Тема письма:</label></td>
-						<td><input type="text" onClick="controlMail()" name="tema" id="tema" /></td>
+						<td><input type="text" data-ng-model="tema" name="tema" id="tema" required/></td>
 					</tr>
-					<tr>
+					<tr data-ng-show="myForm.fio.$valid && myForm.eml.$valid && myForm.tema.$valid">
 						<td><label for="msg">Текст письма:</label></td>
-						<td><textarea name="msg" id="msg" cols="40" rows="10"></textarea></td>
+						<td><textarea name="msg" id="msg" cols="40" rows="10">
+							с уважением, {{fio}}
+						</textarea></td>
 					</tr>
 					<tr>
 						<td colspan="2"><input type="submit" id="subm" value="Отправить..." disabled /></td>
 					</tr>
 				</table>
 			  </form>
-			  
+
 			</div>
 		</div> <!-- #centercontent -->
 	</div> <!-- #content -->

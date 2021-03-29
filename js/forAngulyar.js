@@ -20,10 +20,7 @@ app.controller("indexController", function ($scope) {
 
 // Контроллер для страницы contact.html
 app.controller("contactController", function ($scope) {
-    $scope.countClick = 1;
-    $scope.myClick = function () {
-      $scope.countClick++;
-    };
+    $scope.prefixes = ['Mr', 'Mrs', 'Miss', 'Ms', 'Dr'];
 });
 
 // Контроллер для страницы docs.html
