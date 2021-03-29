@@ -1,83 +1,30 @@
-<!DOCTYPE html>
-<head>
-	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
-	<meta name="yandex-verification" content="5e427e0a332944a8" />
-	<title>Музыкальная школа|Фотоальбом</title>
-	<link href="css/style.css" rel="stylesheet" type="text/css" />
-	<script src="js/angular.min.js"></script>
-	<script src="js/forAngulyar.js"></script>
-</head>
-
-<body data-ng-app="myApp" data-ng-controller="fotoalbController">
-<div id="wrapper">
-	<div id="header">
-		<p>Муниципальное бюджетное учреждение дополнительного образования "Ирбинская детская музыкальная школа"</p>
-		<a href="index.html"><img id="logo" src="images/logo.png" /></a>
-		<img id="niz" src="images/imgcentr.png"/> <img src="images/instr.png" id="instr" /> 
-		<img id="home" src="images/home_03.png"/>
-		<span id="hometext"> Красноярский край, Курагинский район, пгт.Большая Ирба, ул.Ленина 2а</span>
-		<img id="phone" src="images/tel_03.png" />
-		<span id="phonetext"> тел.8(39136)6-32-69</span>
-		<img id="email" src="images/tel_07.png" />
-		<span id="emailtext"> Irbadmsh@mail.ru</span>
-	</div> <!-- #heder -->
-	<div id="content">
-		<div class="menu" ng-controller="menuController">
-			<img src="images/arn2_03.png" />
-			<ul>
-				<li ng-repeat="itemMenu in listMenu">
-					<a href="{{itemMenu.linkPage}}">{{itemMenu.linkName}}</a>
-				</li>
-			</ul>
-		</div> <!-- .menu -->
-		<div id="rightbar">
-			<img id="arn" src="images/arn2_03.png" />
-			<p>Лицензии:</p>
-			<a href="images/uhdoc/big/lic.JPG" target="_blank"><img class="licen" src="images/uhdoc/min/slic.jpg" /></a>
-			<a href="zoom.html" target="_blank"><img class="zoom__img" src="images/zoom.jpg" /></a>
-		</div> <!-- #rightbar -->
-		<div id="centercontent">
-			<div id="baner">
-				<img src="images/nota_09.png"/>
-				<p>Последние новости:</p>
-				<last-News/>
-				<a href="news.html#one">читать далее...</a>
-			</div>
-			<div id="cont">
-			 <a href="fotoalb/big/1.jpg" target="_blank"><img src="fotoalb/min/1.jpg" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/2.jpg" target="_blank"><img src="fotoalb/min/2.jpg" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/3.jpg" target="_blank"><img src="fotoalb/min/3.jpg" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/4.jpg" target="_blank"><img src="fotoalb/min/4.jpg" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/5.jpg" target="_blank"><img src="fotoalb/min/5.jpg" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/6.jpg" target="_blank"><img src="fotoalb/min/6.jpg" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/7.jpg" target="_blank"><img src="fotoalb/min/7.jpg" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/8.jpg" target="_blank"><img src="fotoalb/min/8.jpg" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/9.jpg" target="_blank"><img src="fotoalb/min/9.jpg" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/10.jpg" target="_blank"><img src="fotoalb/min/10.jpg" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/11.jpg" target="_blank"><img src="fotoalb/min/11.jpg" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/12.jpg" target="_blank"><img src="fotoalb/min/12.jpg" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/13.jpg" target="_blank"><img src="fotoalb/min/13.jpg" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/14.jpg" target="_blank"><img src="fotoalb/min/14.jpg" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/15.jpg" target="_blank"><img src="fotoalb/min/15.jpg" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/16.jpg" target="_blank"><img src="fotoalb/min/16.jpg" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/17.jpg" target="_blank"><img src="fotoalb/min/17.jpg" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/18.jpg" target="_blank"><img src="fotoalb/min/18.jpg" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/19.jpg" target="_blank"><img src="fotoalb/min/19.jpg" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/20.jpg" target="_blank"><img src="fotoalb/min/20.jpg" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/21.jpg" target="_blank"><img src="fotoalb/min/21.jpg" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/22.JPG" target="_blank"><img src="fotoalb/min/22.JPG" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/23.JPG" target="_blank"><img src="fotoalb/min/23.JPG" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/24.JPG" target="_blank"><img src="fotoalb/min/24.JPG" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/25.JPG" target="_blank"><img src="fotoalb/min/25.JPG" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/26.JPG" target="_blank"><img src="fotoalb/min/26.JPG" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/27.jpg" target="_blank"><img src="fotoalb/min/27.jpg" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/28.jpg" target="_blank"><img src="fotoalb/min/28.jpg" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/29.jpg" target="_blank"><img src="fotoalb/min/29.jpg" alt="" title="Фото"/></a>
-			 <a href="fotoalb/big/30.jpg" target="_blank"><img src="fotoalb/min/30.jpg" alt="" title="Фото"/></a>
-			</div>
-		</div> <!-- #centercontent -->
-	</div> <!-- #content -->
-	<div id="footer" footer-date=""></div>
-</div>
-</body>
-</html>
+	<a href="fotoalb/big/1.jpg" target="_blank"><img src="fotoalb/min/1.jpg" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/2.jpg" target="_blank"><img src="fotoalb/min/2.jpg" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/3.jpg" target="_blank"><img src="fotoalb/min/3.jpg" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/4.jpg" target="_blank"><img src="fotoalb/min/4.jpg" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/5.jpg" target="_blank"><img src="fotoalb/min/5.jpg" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/6.jpg" target="_blank"><img src="fotoalb/min/6.jpg" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/7.jpg" target="_blank"><img src="fotoalb/min/7.jpg" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/8.jpg" target="_blank"><img src="fotoalb/min/8.jpg" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/9.jpg" target="_blank"><img src="fotoalb/min/9.jpg" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/10.jpg" target="_blank"><img src="fotoalb/min/10.jpg" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/11.jpg" target="_blank"><img src="fotoalb/min/11.jpg" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/12.jpg" target="_blank"><img src="fotoalb/min/12.jpg" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/13.jpg" target="_blank"><img src="fotoalb/min/13.jpg" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/14.jpg" target="_blank"><img src="fotoalb/min/14.jpg" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/15.jpg" target="_blank"><img src="fotoalb/min/15.jpg" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/16.jpg" target="_blank"><img src="fotoalb/min/16.jpg" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/17.jpg" target="_blank"><img src="fotoalb/min/17.jpg" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/18.jpg" target="_blank"><img src="fotoalb/min/18.jpg" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/19.jpg" target="_blank"><img src="fotoalb/min/19.jpg" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/20.jpg" target="_blank"><img src="fotoalb/min/20.jpg" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/21.jpg" target="_blank"><img src="fotoalb/min/21.jpg" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/22.JPG" target="_blank"><img src="fotoalb/min/22.JPG" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/23.JPG" target="_blank"><img src="fotoalb/min/23.JPG" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/24.JPG" target="_blank"><img src="fotoalb/min/24.JPG" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/25.JPG" target="_blank"><img src="fotoalb/min/25.JPG" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/26.JPG" target="_blank"><img src="fotoalb/min/26.JPG" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/27.jpg" target="_blank"><img src="fotoalb/min/27.jpg" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/28.jpg" target="_blank"><img src="fotoalb/min/28.jpg" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/29.jpg" target="_blank"><img src="fotoalb/min/29.jpg" alt="" title="Фото"/></a>
+	<a href="fotoalb/big/30.jpg" target="_blank"><img src="fotoalb/min/30.jpg" alt="" title="Фото"/></a>

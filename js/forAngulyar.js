@@ -1,4 +1,42 @@
-var app = angular.module("myApp", []);
+var app = angular.module("myApp", ["ngRoute"]);
+
+app.config(function($routeProvider) {
+   $routeProvider
+       .when("/", {
+           templateUrl: 'home.html'
+       })
+       .when("/onas", {
+           templateUrl: 'onas.html',
+           controller: 'onasController'
+       })
+       .when("/news", {
+           templateUrl: 'news.html',
+           controller: 'newsController'
+       })
+       .when("/docs", {
+           templateUrl: 'docs.html',
+           controller: 'docsController'
+       })
+       .when("/pedsostav", {
+           templateUrl: 'pedsostav.html',
+           controller: 'pedsostavController'
+       })
+       .when("/uspeh", {
+           templateUrl: 'uspeh.html',
+           controller: 'uspehController'
+       })
+       .when("/fotoalb", {
+           templateUrl: 'fotoalb.html',
+           controller: 'fotoalbController'
+       })
+       .when("/contact", {
+           templateUrl: 'contact.html',
+           controller: 'contactController'
+       })
+       .otherwise("", {
+           template: "<h2>Page not found</h2>"
+       });
+});
 
 app.directive("footerDate", function () {
     return {
@@ -54,14 +92,14 @@ app.controller("zoomController", function ($scope) {
 // Контроллер для меню(слева) на всех страницах
 app.controller("menuController", function ($scope) {
     $scope.listMenu = [
-        {"linkPage": "index.html", "linkName": "Главная"},
-        {"linkPage": "onas.html", "linkName": "О нас"},
-        {"linkPage": "news.html", "linkName": "Новости"},
-        {"linkPage": "docs.html", "linkName": "Документы"},
-        {"linkPage": "pedsostav.html", "linkName": "Преподаватели"},
-        {"linkPage": "uspeh.html", "linkName": "Наши успехи"},
-        {"linkPage": "fotoalb.html", "linkName": "Фотоальбом"},
-        {"linkPage": "contact.html", "linkName": "Контакты"}
+        {"linkPage": "#/!", "linkName": "Главная"},
+        {"linkPage": "#!onas", "linkName": "О нас"},
+        {"linkPage": "#!news", "linkName": "Новости"},
+        {"linkPage": "#!docs", "linkName": "Документы"},
+        {"linkPage": "#!pedsostav", "linkName": "Преподаватели"},
+        {"linkPage": "#!uspeh", "linkName": "Наши успехи"},
+        {"linkPage": "#!fotoalb", "linkName": "Фотоальбом"},
+        {"linkPage": "#!contact", "linkName": "Контакты"}
     ];
 });
 
