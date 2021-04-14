@@ -46,7 +46,7 @@ app.directive("footerDate", function () {
 
 app.directive("lastNews", function () {
    return {
-       template: " <span style='font-size: 14px;'><b><i> 7 апреля 2021 года состоялся XII МЕЖДУНАРОДНЫЙ музыкально-театральный конкурс-фестиваль «Надежда» (г. Красноярск)</i></b></span>"
+       template: " <span style='font-size: 14px;'><b><i> 10 апреля 2021 года. 27-ой межрегиональный фестиваль «Джаз в Хакасии-2021</i></b></span>"
    }
 });
 
