@@ -46,7 +46,7 @@ app.directive("footerDate", function () {
 
 app.directive("lastNews", function () {
    return {
-       template: " <span style='font-size: 14px;'><b><i> 10 апреля 2021 года. 27-ой межрегиональный фестиваль «Джаз в Хакасии-2021</i></b></span>"
+       template: " <span style='font-size: 14px;'><b><i> 23 апреля 2021 года 2 ученика МБУДО «Ирбинская ДМШ» приняли участие в XIII Всероссийском конкурсе музыкантов</i></b></span>"
    }
 });
 
